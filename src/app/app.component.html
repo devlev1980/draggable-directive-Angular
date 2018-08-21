@@ -1,0 +1,11 @@
+<h2>Part - Draggable Directive</h2>
+
+<div class="box" appDraggable (dragStart)="onDragStart($event)"
+     (dragMove)="onDragMove($event)"
+     (dragEnd)="onDragEnd($event)">Draggable Directive
+</div>
+
+<div class="box" appDraggableRx (dragStart)="onDragStart($event)"
+     (dragMove)="onDragMove($event)"
+     (dragEnd)="onDragEnd($event)">Draggable DirectiveRx
+</div>
