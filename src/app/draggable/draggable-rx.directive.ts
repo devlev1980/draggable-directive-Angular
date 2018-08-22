@@ -37,10 +37,10 @@ export class DraggableRxDirective implements OnInit {
     /*Stream of dragStart*/
     const dragStart$ = this.pointerDown.asObservable();
 
-    /*let's test the stream of Observables*/
-    // dragStart$.subscribe(() => {
-    //   console.log('drag start stream');
-    // });
+    // let's test the stream of Observables
+    dragStart$.subscribe(() => {
+      console.log('drag start stream');
+    });
 
     /*Stream of dragMove*/
     const dragMove$ = this.pointerDown.pipe(
@@ -50,7 +50,7 @@ export class DraggableRxDirective implements OnInit {
 
     /*let's test the stream of Observables*/
     dragMove$.subscribe(() => {
-      // console.log('drag move stream');
+      console.log('drag move stream');
     });
     /*Stream of dragEnd*/
     const dragEnd$ = this.pointerDown.pipe(
